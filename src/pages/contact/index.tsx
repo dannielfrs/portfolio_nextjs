@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react'
 import type { NextPageWithLayout } from '@/pages/_app'
+import { MainTemplate } from '@/templates/MainTemplate/MainTemplate'
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -7,12 +8,11 @@ const Page: NextPageWithLayout = () => {
   )
 }
 
-Page.getLayout = function getLayout(page: ReactElement) {
+Page.getLayout = function getLayout (page: ReactElement) {
   return (
-    <div></div>
-    // <LayoutAuth title='Historial'>
-    //   {page}
-    // </LayoutAuth>
+    <MainTemplate headTitle='My Portfolio'>
+      {page}
+    </MainTemplate>
   )
 }
 

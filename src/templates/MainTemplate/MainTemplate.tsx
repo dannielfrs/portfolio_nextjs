@@ -1,5 +1,5 @@
 import { ReactNode, memo, useState } from 'react'
-import styles from './LayoutAuth.module.scss'
+import styles from './styles.module.scss'
 import Head from 'next/head'
 import { Roboto } from 'next/font/google'
 // import { Navbar } from '@/components/organisms/Navbar/Navbar'
@@ -13,11 +13,10 @@ const roboto = Roboto({
 interface ComponentProps {
   headTitle?: string
   headDescription?: string
-  showSidebar?: boolean
   children: ReactNode
 }
 
-export const LayoutAuth: React.FC<ComponentProps> = memo(({ headTitle, headDescription, showSidebar = true, children }) => {
+export const MainTemplate: React.FC<ComponentProps> = memo(({ headTitle, headDescription, children }) => {
   //
   const [collapseSidebar, setCollapseSidebar] = useState(false)
 
@@ -29,14 +28,13 @@ export const LayoutAuth: React.FC<ComponentProps> = memo(({ headTitle, headDescr
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className={`${styles.layout} ${collapseSidebar ? styles.layout_collapse : ''} ${showSidebar ? '' : styles.layout_hidesidebar} ${roboto.className}`}>
-        <div className={styles.layout_navbar}>
-          {/* <Navbar /> */}
+      <div className={`${styles.layout} ${collapseSidebar ? styles.layout_collapse : ''} ${roboto.className}`}>
+        {/* <div className={styles.layout_navbar}>
+          <Navbar />
         </div>
-        {showSidebar &&
-          <div className={styles.layout_sidebar}>
-            {/* <Sidebar /> */}
-          </div>}
+        <div className={styles.layout_sidebar}>
+          <Sidebar />
+        </div> */}
         <main className={styles.layout_page}>
           {children}
         </main>
@@ -45,4 +43,4 @@ export const LayoutAuth: React.FC<ComponentProps> = memo(({ headTitle, headDescr
   )
 })
 
-LayoutAuth.displayName = 'LayoutAuth'
+MainTemplate.displayName = 'MainTemplate'
