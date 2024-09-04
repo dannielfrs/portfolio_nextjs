@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { Roboto } from 'next/font/google'
 // import { Navbar } from '@/components/organisms/Navbar/Navbar'
 // import { Sidebar } from '@/components/organisms/Sidebar/Sidebar'
+import Footer from '@/components/views/Footer/Footer'
 
 const roboto = Roboto({
   weight: '400',
@@ -38,6 +39,7 @@ export const MainTemplate: React.FC<ComponentProps> = memo(({ headTitle, headDes
         <main className={styles.layout_page}>
           {children}
         </main>
+        <Footer />
       </div>
     </>
   )
