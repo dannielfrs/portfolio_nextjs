@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { Roboto } from 'next/font/google'
 // import { Navbar } from '@/components/organisms/Navbar/Navbar'
 // import { Sidebar } from '@/components/organisms/Sidebar/Sidebar'
-import Footer from '@/components/views/Footer/Footer'
+import { Footer } from '@/components/views/Footer/Footer'
 
 const roboto = Roboto({
   weight: '400',

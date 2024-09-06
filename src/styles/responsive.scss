@@ -1,0 +1,35 @@
+/**
+ * Large screen
+ */
+@mixin large-screen() {
+    @media screen and (max-width: 1620px) {
+        @content;
+    }
+}
+
+/**
+ * Laptop screen
+ */
+@mixin laptop-screen() {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+
+/**
+ * Tablet screen
+ */
+@mixin tablet-screen() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+/**
+ * Phone screen
+ */
+@mixin phone-screen() {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
