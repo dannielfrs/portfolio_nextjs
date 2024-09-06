@@ -1,7 +1,8 @@
 import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import "@/styles/globals.scss"
+import '@/styles/globals.scss'
+import '@/styles/settings.scss'
 import 'primereact/resources/primereact.min.css'
 import { Exo } from 'next/font/google'
 

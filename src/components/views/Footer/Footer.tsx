@@ -1,9 +1,11 @@
-import Link from 'next/link'
+import { memo } from 'react'
 import styles from './styles.module.scss'
+import Link from 'next/link'
 import { BsPhone, BsEnvelope } from 'react-icons/bs'
 import { FaFacebookSquare, FaGithub, FaLinkedin } from 'react-icons/fa'
 
-const Footer = () => {
+export const Footer: React.FC = memo(() => {
+  //
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_container}>
@@ -32,6 +34,6 @@ const Footer = () => {
       </div>
     </footer>
   )
-}
+})
 
-export default Footer
+Footer.displayName = 'Footer'
